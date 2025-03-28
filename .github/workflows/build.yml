@@ -23,16 +23,19 @@ jobs:
     - name: Build user-service
       run: |
         cd user-service
+        chmod +x mvnw
         ./mvnw clean package -DskipTests
     
     - name: Build project-service
       run: |
         cd project-service
+        chmod +x mvnw
         ./mvnw clean package -DskipTests
     
     - name: Build api-gateway
       run: |
         cd api-gateway
+        chmod +x mvnw
         ./mvnw clean package -DskipTests
     
     # Run tests
