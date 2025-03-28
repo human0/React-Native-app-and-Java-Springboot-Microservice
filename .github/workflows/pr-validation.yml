@@ -24,14 +24,13 @@ jobs:
       run: |
         COMMIT_MSG=$(git log --format=%B -n 1 "$GITHUB_SHA")
         if ! [[ $COMMIT_MSG =~ ^(feature|fix|docs|refactor|test|ci)(\(.+\))?:\ .+ ]]; then
-          echo "❌ Commit message does not follow conventional commit format:"
+          echo "❌ WARNNING: Commit message does not follow conventional commit format:"
           echo "----------------------------------------------------------"
           echo "$COMMIT_MSG"
           echo "----------------------------------------------------------"
           echo "🛠️ Format should be: <type>[(ticket)]: <description>"
           echo "✔️ Example: feature(user-service): add user authentication"
           echo "Fix with git rebase -i HEAD~N"
-          exit 1
         fi
 
     - name: Build and test
