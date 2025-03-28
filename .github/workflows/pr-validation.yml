@@ -25,8 +25,3 @@ jobs:
           echo "✔️ Example: feature(user-service): add user authentication"
           echo "Fix with git rebase -i HEAD~N"
         fi
-
-    - name: Build and test
-      run: |
-        echo "Running build and tests for PR validation"
-        # cd service-name && ./mvnw clean verify
