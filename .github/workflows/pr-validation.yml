@@ -23,11 +23,11 @@ jobs:
     - name: Validate commit message format
       run: |
         COMMIT_MSG=$(git log --format=%B -n 1 ${{ github.event.after }})
-        if ! [[ $COMMIT_MSG =~ ^(feat|fix|docs|style|refactor|perf|test|ci|chore)(\(.+\))?: .+ ]]; then
+        if ! [[ $COMMIT_MSG =~ ^(feature|fix|docs|refactor|test)(\(.+\))?: .+ ]]; then
           echo "Commit message does not follow conventional commit format"
-          echo "Format: <type>[(scope)]: <description>"
-          echo "Types: feat, fix, docs, style, refactor, perf, test, ci, chore"
-          echo "Example: feat(user-service): add user authentication"
+          echo "Format: <type>[(jira#)]: <description>"
+          echo "Types: feature, fix, docs, refactor, test, ci"
+          echo "Example: feature(user-service): add user authentication"
           exit 1
         fi
 
