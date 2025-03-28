@@ -92,13 +92,13 @@ git checkout -b feature/user-profile
 
 # Work on feature with regular commits...
 git add .
-git commit -m "feat(SP-223): add user avatar upload component"
+git commit -m "feature(SP-223): add user avatar upload component"
 
 # Push to remote (first time)
 git push -u origin feature/user-profile
 
 # Continue development...
-git commit -m "feat(SP-223): implement image cropping"
+git commit -m "feature(SP-223): implement image cropping"
 git push
 ```
 
