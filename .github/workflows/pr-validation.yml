@@ -13,13 +13,6 @@ jobs:
       with:
         fetch-depth: 0
     
-    # - name: Set up JDK 17
-    #   uses: actions/setup-java@v3
-    #   with:
-    #     java-version: '17'
-    #     distribution: 'temurin'
-    #     cache: maven
-    
     - name: Validate commit message format
       run: |
         COMMIT_MSG=$(git log --format=%B -n 1 "$GITHUB_SHA")
@@ -32,8 +25,3 @@ jobs:
           echo "✔️ Example: feature(user-service): add user authentication"
           echo "Fix with git rebase -i HEAD~N"
         fi
-
-    - name: Build and test
-      run: |
-        echo "Running build and tests for PR validation"
-        # cd service-name && ./mvnw clean verify

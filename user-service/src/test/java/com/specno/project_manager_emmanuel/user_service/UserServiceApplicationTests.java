@@ -1,0 +1,13 @@
+package com.specno.project_manager_emmanuel.user_service;
+
+import org.junit.jupiter.api.Test;
+import org.springframework.boot.test.context.SpringBootTest;
+
+@SpringBootTest
+class UserServiceApplicationTests {
+
+	@Test
+	void contextLoads() {
+	}
+
+}

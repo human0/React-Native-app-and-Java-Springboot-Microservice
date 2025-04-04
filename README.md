@@ -10,8 +10,7 @@ specno-project-management/
 │   └── workflows/                # GitHub Actions CI/CD
 ├── api-gateway/                  # API Gateway service
 ├── user-service/                 # User management microservice
-├── project-service/              # Project management microservice  
-├── task-service/                 # Task management microservice
+├── project-service/              # Project management microservice
 ├── notification-service/         # Optional: Notification service
 ├── frontend/                     # React frontend application
 ├── infrastructure/               # Docker, Kubernetes configs
@@ -23,11 +22,17 @@ specno-project-management/
 ### New Project
 
 Make a local copy of the project if you do not have one already
-
 ```bash
 # Clone the repository
 git clone https://github.com/human0/SpecManager.git
 cd SpecManager
+```
+
+### New Project
+
+To run each microservice navigate to its root directory and run:
+```bash
+ .\mvnw spring-boot:run
 ```
 
 ## Branching Strategy
