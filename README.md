@@ -35,6 +35,27 @@ To run each microservice navigate to its root directory and run:
  .\mvnw spring-boot:run
 ```
 
+### View Swagger docs
+
+http://localhost:8080/swagger-ui.html
+
+### Testing with Curl (example)
+
+Authentications test
+```bash
+curl -v -X POST http://localhost:8080/api/auth/login -H "Content-Type: application/json" -d "{\"username\":\"testuser\",\"password\":\"password123\"}"
+```
+
+Test Protected fetch user request
+```bash
+curl -v -X GET http://localhost:8080/api/users/me -H "Authorization: Bearer GENERATED_TOKEN"
+```
+
+Test Protected fetch project request
+```bash
+curl -v -X GET http://localhost:8080/api/projects/my -H "Authorization: Bearer GENERATED_TOKEN"
+```
+
 ## Branching Strategy
 
 Our project follows a structured branching strategy to maintain code quality and provide a clear development history.
